@@ -6,23 +6,23 @@ public class PalindromeCheckerApp {
 
             String input = "level";
 
-            // Edge cases
+            
             if (input == null) {
                 System.out.println("Input is null");
                 return;
             }
 
-            // Create LinkedList
+            
             LinkedList<Character> list = new LinkedList<>();
 
-            // Add characters to list
+            
             for (char c : input.toCharArray()) {
                 list.add(c);
             }
 
             boolean isPalindrome = true;
 
-            // Compare first and last until 0 or 1 element remains
+           
             while (list.size() > 1) {
                 if (!list.removeFirst().equals(list.removeLast())) {
                     isPalindrome = false;
