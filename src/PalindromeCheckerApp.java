@@ -1,18 +1,31 @@
 public class PalindromeCheckerApp {
         public static void main(String[] args) {
 
-            String original = "level";
 
-            // Variable to store reversed string
-            String reversed = "";
+            String original = "racecar";
 
-            // Reverse using for loop
-            for (int i = original.length() - 1; i >= 0; i--) {
-                reversed = reversed + original.charAt(i);
+
+            char[] chars = original.toCharArray();
+
+
+            int left = 0;
+            int right = chars.length - 1;
+
+
+            boolean isPalindrome = true;
+
+
+            while (left < right) {
+                if (chars[left] != chars[right]) {
+                    isPalindrome = false;
+                    break;
+                }
+                left++;
+                right--;
             }
 
-            // Compare original and reversed
-            if (original.equals(reversed)) {
+
+            if (isPalindrome) {
                 System.out.println(original + " is a Palindrome");
             } else {
                 System.out.println(original + " is NOT a Palindrome");
